@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Person form (JSP + JavaBean)</title>
+</head>
+<body>
+<main>
+  <h1>Person form (POST to bean.jsp)</h1>
+
+  <!-- The field names are identical to the bean properties, which lets
+       <jsp:setProperty property="*"> fill the bean automatically. -->
+  <form action="bean.jsp" method="POST">
+    <label>First name
+      <input type="text" name="firstName" required>
+    </label>
+    <label>Last name
+      <input type="text" name="lastName" required>
+    </label>
+    <label>Birth date (mm/dd/yyyy)
+      <input type="text" name="birthDay" placeholder="mm/dd/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+    </label>
+    <fieldset>
+      <legend>Sex</legend>
+      <label><input type="radio" name="sex" value="Male" required> Male</label>
+      <label><input type="radio" name="sex" value="Female"> Female</label>
+    </fieldset>
+    <input type="submit" value="Send">
+  </form>
+
+  <p class="nav"><a href="index.html">&larr; Back to the lab index</a></p>
+</main>
+</body>
+</html>

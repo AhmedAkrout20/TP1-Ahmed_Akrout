@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MVC - Person form</title>
+</head>
+<body>
+<main>
+  <h1>MVC: person form</h1>
+  <p>The Controller sends you to a different page depending on your birth year.</p>
+
+  <!-- The View posts to the Controller servlet (mapped on /Controller) -->
+  <form action="../Controller" method="POST">
+    <label>First name
+      <input type="text" name="firstName" required>
+    </label>
+    <label>Last name
+      <input type="text" name="lastName" required>
+    </label>
+    <label>Birth date (mm/dd/yyyy)
+      <input type="text" name="birthDay" placeholder="mm/dd/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+    </label>
+    <fieldset>
+      <legend>Sex</legend>
+      <label><input type="radio" name="sex" value="Male" required> Male</label>
+      <label><input type="radio" name="sex" value="Female"> Female</label>
+    </fieldset>
+    <input type="submit" value="Send">
+  </form>
+
+  <p class="nav"><a href="../index.html">&larr; Back to the lab index</a></p>
+</main>
+</body>
+</html>
